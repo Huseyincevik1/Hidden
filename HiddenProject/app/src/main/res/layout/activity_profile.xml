@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ProfileActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:contentDescription="selectImage"
+        android:onClick="selectImage"
+        android:padding="5dp"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:srcCompat="@drawable/profile"
+        app:strokeColor="#000"
+        app:strokeWidth="5dp" />
+
+    <EditText
+        android:id="@+id/editTextProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center"
+        android:text="Kullanıcı Adı"
+        android:textColor="#FFF"
+        android:background="#0000"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="false" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/editTextProfile"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="28dp"
+        android:layout_above="@id/nav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="356dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/nav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bar"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        android:background="@drawable/shape"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

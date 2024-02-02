@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".MessageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:padding="10dp"
+        android:id="@+id/toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imageView"
+            android:id="@+id/other_username"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="false"
+            android:layout_marginTop="12dp"
+            android:contentDescription="selectImage"
+            android:onClick="selectImage"
+            android:padding="5dp"
+            app:shapeAppearanceOverlay="@style/circular"
+            app:srcCompat="@drawable/profile"
+            app:strokeColor="#000"
+            app:strokeWidth="5dp" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/nav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bar"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        android:background="@drawable/shape"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/messageLayout"
+        android:id="@+id/chat_recycler_view"/>
+
+    <LinearLayout
+        android:id="@+id/messageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nav"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your message here"
+            android:padding="13dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            app:strokeColor="?attr/colorPrimary"/>
+
+        <Button
+            android:id="@+id/buttonAddMessage"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_gravity="end"
+            android:onClick="addMessage"
+            android:text=""
+            app:icon="@drawable/baseline_send_24"
+            app:iconGravity="textStart"
+            app:shapeAppearance="@style/circular"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="2dp"
+            android:contentDescription="Send Message Button" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/nav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bar"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        android:background="@drawable/shape"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/commentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nav"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your comment here"
+            android:padding="13dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            app:strokeColor="?attr/colorPrimary"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAddComment"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_gravity="end"
+            android:onClick="addComment"
+            android:text=""
+            app:icon="@drawable/baseline_send_24"
+            app:iconGravity="textStart"
+            app:shapeAppearance="@style/circular"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="2dp"
+            android:contentDescription="Add Comment Button"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/commentLayout" />
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HiddenProject</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps3">MapsActivity3</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+    <string name="title_activity_chat_list">ChatListActivity</string>
+
+</resources>

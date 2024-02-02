@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".EditUserActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/nav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bar"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        android:background="@drawable/shape"
+        android:layout_height="wrap_content"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="28dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABOUT THE APP"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Hidden project, realized by Hüseyin Buğra Çevik in 2023, is a platform designed to fulfill the desires of nature enthusiasts to explore natural beauties, provide a fun experience for treasure hunters and explorers, and assist owners in recovering lost items. The core objective of this project is to encourage people to explore the magical world within nature, highlight the importance of natural areas and the environment, and increase awareness of conservation. Users can capture photos of items lost in natural settings such as beaches and forests, share the locations of these items, and interact with other users. Additionally, treasure and exploration enthusiasts can use the platform to leave items in specific locations, encouraging other users to find them and creating an enjoyable atmosphere of competition and sharing." />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

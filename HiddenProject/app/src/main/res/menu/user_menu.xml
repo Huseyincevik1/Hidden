@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/updateUser" android:title="Update User"></item>
+    <item android:id="@+id/updatePassword" android:title="Update Password"></item>
+    <item android:id="@+id/deleteAccount" android:title="Delete Account"></item>
+    <item android:id="@+id/aboutApp" android:title="About the App"></item>
+</menu>
